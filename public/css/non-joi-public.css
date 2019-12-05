@@ -1,0 +1,65 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+/* my-nav-menu-search menu item created in functions.php. Move it way over to the right */
+.navbar .nav .my-nav-menu-search {
+    float: right;
+}
+.navbar .nav {
+    width: 100%;
+}
+.my-nav-menu-search .search-form {
+    position: relative;
+    margin: 0;
+}
+/*Stop the display of the Search button*/
+.my-nav-menu-search .search-submit {
+    background: url(https://www.freeiconspng.com/uploads/search-icon-png-1.png) no-repeat center;
+    background-size: 64px;
+    text-indent: -9999em;
+}
+/* The "Search for" text is needed for screen readers, but we move it off screen, so we won't see it */
+.my-nav-menu-search .search-form .screen-reader-text {
+    position: absolute;
+    left: -9999px;
+    overflow: hidden;
+}
+
+/* Style the search input textbox */
+.my-nav-menu-search .search-field {
+    background: transparent;
+
+    height: 26px;
+    padding: 0 0 0 36px;
+    position: relative;
+    -webkit-transition: width 400ms ease;
+    -moz-transition:    width 400ms ease;
+    -o-transition:      width 400ms ease;
+    transition:         width 400ms ease;
+    color: #ffffff;
+    /* change the colour above if you are working with a dark navbar background */
+    border: 2px solid #c3c0ab;
+    cursor: text;
+    outline: 0;
+    width: 200px;
+    margin: 0;
+}
+
+/* Expand the search box when you click it */
+.my-nav-menu-search .search-field:active,
+.my-nav-menu-search .search-field:focus {
+
+}
+
+
+
+/* Reset nav width and search floating for mobile menu */
+@media (max-width: 979px){
+    .navbar .nav .my-nav-menu-search {
+        float: left;
+    }
+    .navbar .nav {
+        width: auto;
+    }
+}
